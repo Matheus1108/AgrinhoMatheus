@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Festa Junina - Cultura e Tradição (Desktop)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    min-height: 100vh;
+    font-family: 'Baloo 2', cursive, sans-serif;
+    background: url('https://cdn.pixabay.com/photo/2016/06/10/16/19/june-1448306_1280.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #3e2c00;
+    overflow-y: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 30px;
+  }
+  /* Translucent overlay container for content */
+  .container {
+    background: rgba(255, 255, 255, 0.85); /* white with transparency */
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+    padding: 40px 50px;
+    overflow-y: visible;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  header h1 {
+    font-size: 3.8rem;
+    color: #a63e00;
+    text-shadow: 2px 2px 4px #fff;
+  }
+  /* Festive flags decoration on header */
+  .flags {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .flag {
+    width: 50px;
+    height: 33px;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    animation: swing 3s ease-in-out infinite alternate;
+    transform-origin: top left;
+  }
+  .flag:nth-child(odd) { animation-delay: 0s; }
+  .flag:nth-child(even) { animation-delay: 1.5s; }
+  .flag.red {background: #d32f2f;}
+  .flag.yellow {background: #fbc02d;}
+  .flag.green {background: #388e3c;}
+  .flag.blue {background: #1976d2;}
+  @keyframes swing {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(10deg);}
+  }
+  /* Sections styling */
+  section {
+    margin-bottom: 36px;
+  }
+  h2 {
+    font-size: 2.4rem;
+    color: #bf360c;
+    margin-bottom: 18px;
+    border-bottom: 3px solid #fbc02d;
+    padding-bottom: 6px;
+  }
+  p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    text-align: justify;
+  }
+  /* Important highlights */
+  .highlight {
+    color: #bf360c;
+    font-weight: 700;
+  }
+  /* Images for culture items */
+  .img-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 18px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+  .img-row img {
+    width: 130px;
+    height: 130px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .img-row img:hover {
+    transform: scale(1.12);
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 1rem;
+    color: #6d4c41;
+    margin-top: 22px;
+  }
+  /* Responsive adjustments */
+  @media (max-width: 960px) {
+    .container {
+      max-width: 90vw;
+      padding: 30px 25px;
+      border-radius: 16px;
+    }
+    h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+      padding-bottom: 4px;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    .img-row img {
+      width: 110px;
+      height: 110px;
+    }
+  }
+  @media (max-width: 650px) {
+    .flags {
+      gap: 10px;
+    }
+    .flag {
+      width: 40px;
+      height: 27px;
+    }
+    h1 {
+      font-size: 2.4rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .img-row img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Conteúdo cultural da Festa Junina">
+    <header>
+      <h1>Festa Junina 🎉</h1>
+      <div class="flags" aria-hidden="true">
+        <div class="flag red"></div>
+        <div class="flag yellow"></div>
+        <div class="flag green"></div>
+        <div class="flag blue"></div>
+      </div>
+    </header>
+
+    <section aria-labelledby="cultura-title">
+      <h2 id="cultura-title">A Cultura da Festa Junina</h2>
+      <p>
+        A <span class="highlight">Festa Junina</span> é uma tradicional celebração brasileira que ocorre no mês de junho, com raízes na cultura portuguesa e influência das festas rurais nordestinas. É marcada por danças típicas, comidas deliciosas, fogueiras e muita música.
+        Esta festa é uma homenagem a santos católicos como São João, São Pedro e Santo Antônio.
+      </p>
+    </section>
+
+    <section aria-labelledby="tradicões-title">
+      <h2 id="tradicões-title">Tradições Típicas</h2>
+      <p>
+        As festividades incluem a <span class="highlight">quadrilha caipira</span>, a dança típica onde os participantes vestem roupas coloridas e simulam um casamento caipira. As fogueiras iluminam as noites e as bandeirinhas coloridas decoram ruas e praças.
+      </p>
+      <div class="img-row" aria-label="Imagens de tradições de Festa Junina">
+        <img src="img/quadrilha.jpg" alt="Quadrilha caipira dançando"/>
+        <img src="img/fogueira.jpg" alt="Fogueira da Festa Junina"/>
+        <img src="img/bandeirinhas.jpg" alt="Bandeirinhas coloridas"/>
+      </div>
+    </section>
+
+    <section aria-labelledby="comidas-title">
+      <h2 id="comidas-title">Comidas Típicas</h2>
+      <p>
+        Um dos grandes prazeres da Festa Junina são as comidas típicas, baseadas em milho, canjica, pamonha e bolo de fubá. Além disso, doces como pé-de-moleque, cocada e quentão são indispensáveis.
+      </p>
+      <div class="img-row" aria-label="Imagens de comidas típicas da Festa Junina">
+        <img src="img/pamonha.webp" alt="Pamonha típica de Festa Junina"/>
+        <img src="img/milho.webp" alt="Milho cozido para Festa Junina"/>
+        <img src="img/" alt="Pé-de-moleque doce"/>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2024 - Uma celebração da rica cultura brasileira.
+    </footer>
+  </div>
+</body>
+</html>
+
+```
